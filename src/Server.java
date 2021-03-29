@@ -5,10 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-/**
- *
- * @author magnus
- */
+
 public class Server {
     public static void main(String[] args){
         int port = 1234;
