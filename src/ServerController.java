@@ -5,9 +5,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+public class ServerController {
 
-public class Server {
-    public static void main(String[] args){
+    public ServerController() {
         int port = 1234;
         boolean run = true;
         ServerSocket serverSocket;
@@ -36,6 +36,7 @@ public class Server {
             }
         } catch (Exception e) {
             System.out.println("Server fail");
+            e.printStackTrace();
         }
     }
 }

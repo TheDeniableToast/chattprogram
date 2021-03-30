@@ -5,21 +5,20 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
+public class ClientController {
 
-public class Client {
-
-    public static void main(String[] args) {
+    public ClientController() {
         String ip = (String) JOptionPane.showInputDialog(null,"IP?","Connect to..",JOptionPane.QUESTION_MESSAGE);
         int port = Integer.parseInt(JOptionPane.showInputDialog(null,"Port?","Connect to..",JOptionPane.QUESTION_MESSAGE));
         Socket socket = null;
-        
+
         try {
             socket = new Socket(ip,port);
         } catch (Exception e) {
             System.out.println("Client failed to connect");
             System.exit(0);
         }
-     
+
         // GO
         try {
             Scanner tgb = new Scanner(System.in);
@@ -40,4 +39,4 @@ public class Client {
             System.out.println("Client failed to communicate");
         }
     }
- }
+}
